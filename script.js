@@ -1,4 +1,4 @@
-// Task 18 inherit Behaviors from a Supertype
+// Task 19 set the Child's Prototype to an Instance of the Parent
 function Animal() { }
 Animal.prototype = {
   constructor: Animal,
@@ -6,5 +6,6 @@ Animal.prototype = {
     console.log("nom nom nom");
   }
 };
-let duck = Object.create(Animal.prototype)
-let beagle =Object.create(Animal.prototype)
+function Dog() { }
+Dog.prototype = Object.create(Animal.prototype)
+let beagle = new Dog();
