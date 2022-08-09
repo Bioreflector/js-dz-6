@@ -1,7 +1,9 @@
-// Task 1 use Dot Notation to Access the Properties of an Object
+// Task 3 Create a Method on an Object
 let dog = {
     name: "Spot",
-    numLegs: 4
+    numLegs: 4,
   };
-  console.log(dog.name)
-  console.log(dog.numLegs)
+  dog.sayLegs = function(){
+    return `This dog has ${dog.numLegs} legs.`
+  }
+  dog.sayLegs()
