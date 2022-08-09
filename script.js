@@ -1,6 +1,7 @@
-// Task 5 define a Constructor Function
-function Dog(){
-    this.name = 'Jack'
-    this.color = 'black'
-    this.numLegs = 4
+// Task 6 use a Constructor to Create Objects
+function Dog() {
+    this.name = "Rupert";
+    this.color = "brown";
+    this.numLegs = 4;
   }
+  const hound = new Dog()
