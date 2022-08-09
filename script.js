@@ -1,6 +1,7 @@
-// Task 15 understand Where an Object’s Prototype Comes From
+// Task 16 understand the Prototype Chain
 function Dog(name) {
     this.name = name;
   }
   let beagle = new Dog("Snoopy");
-  Dog.prototype.isPrototypeOf(beagle)
+  Dog.prototype.isPrototypeOf(beagle);
+  Object.prototype.isPrototypeOf(Dog.prototype);
