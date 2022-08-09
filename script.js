@@ -1,13 +1,6 @@
-// Task 9 understand Own Properties
-function Bird(name) {
+// Task 10 use Prototype Properties to Reduce Duplicate Code
+function Dog(name) {
     this.name = name;
-    this.numLegs = 2;
   }
-  
-  const canary = new Bird("Tweety");
-  const ownProps = [];
-  for(let property in canary){
-    if(canary.hasOwnProperty(property)){
-      ownProps.push(property)
-    }
-  }
+  Dog.prototype.numLegs = 4
+  let beagle = new Dog("Snoopy");
