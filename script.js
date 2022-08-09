@@ -1,14 +1,15 @@
-// Task 20 reset an Inherited Constructor Property
+// Task 21 add Methods After Inheritance
 function Animal() { }
-function Bird() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
 function Dog() { }
 
-Bird.prototype = Object.create(Animal.prototype);
-Dog.prototype = Object.create(Animal.prototype);
-
-Bird.prototype.constructor = Bird
+Dog.prototype = Object.create(Animal.prototype)
 Dog.prototype.constructor = Dog
 
-let duck = new Bird();
+Dog.prototype.bark = function (){
+  console.log("Woof!")
+}
 let beagle = new Dog();
+
 
