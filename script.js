@@ -1,14 +1,6 @@
-// Task 14 remember to Set the Constructor Property when Changing the Prototype
+// Task 15 understand Where an Object’s Prototype Comes From
 function Dog(name) {
     this.name = name;
   }
-  Dog.prototype = {
-    constructor: Dog,
-    numLegs: 4,
-    eat: function() {
-      console.log("nom nom nom");
-    },
-    describe: function(){
-        console.log(`My name is ${this.name}`)
-      }
-  };
+  let beagle = new Dog("Snoopy");
+  Dog.prototype.isPrototypeOf(beagle)
