@@ -1,6 +1,13 @@
-// Task 8 verify an Object's Constructor with instanceof
-function House(numBedrooms) {
-    this.numBedrooms = numBedrooms;
+// Task 9 understand Own Properties
+function Bird(name) {
+    this.name = name;
+    this.numLegs = 2;
   }
-   const myHouse = new House(2)
-   myHouse instanceof House
+  
+  const canary = new Bird("Tweety");
+  const ownProps = [];
+  for(let property in canary){
+    if(canary.hasOwnProperty(property)){
+      ownProps.push(property)
+    }
+  }
