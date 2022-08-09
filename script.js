@@ -1,7 +1,22 @@
-// Task 16 understand the Prototype Chain
-function Dog(name) {
+// Task 17 use Inheritance So You Don't Repeat Yourself
+function Cat(name) {
     this.name = name;
   }
-  let beagle = new Dog("Snoopy");
-  Dog.prototype.isPrototypeOf(beagle);
-  Object.prototype.isPrototypeOf(Dog.prototype);
+  Cat.prototype = {
+    constructor: Cat,
+  };
+  function Bear(name) {
+    this.name = name;
+  }
+  Bear.prototype = {
+    constructor: Bear,
+   
+  };
+  function Animal() { }
+  
+  Animal.prototype = {
+    constructor: Animal,
+    eat: function() {
+      console.log("nom nom nom");
+    }
+  };
