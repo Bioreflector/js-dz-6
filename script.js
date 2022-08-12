@@ -1,7 +1,29 @@
-// Task 25 use Understand the Immediately Invoked Function Expression (IIFE)
-(function (){
-    console.log("A cozy nest is ready")
-})()
+// Task 26 Use an IIFE to Create a Module
+let isCuteMixin = function(obj) {
+    obj.isCute = function() {
+      return true;
+    };
+  };
+  let singMixin = function(obj) {
+    obj.sing = function() {
+      console.log("Singing to an awesome tune");
+    };
+  };
+  
+  const funModule = (function (){
+    return{
+      isCuteMixin : function(obj){
+        obj.isCute = function(){
+          return true
+        }
+      },
+      singMixin: function (obj){
+        obj.sing = function(){
+          console.log("Singing to an awesome tune")
+        }
+      }
+    }
+  })()
 
 
 
